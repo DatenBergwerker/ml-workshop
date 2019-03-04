@@ -104,6 +104,7 @@ for row in ax:
                              cluster_vector=kmean_results['cluster_assignment'][i],
                              cluster_centroids=kmean_results['cluster_centroids'][i],
                              ax=col)
+        col.title(f'K-Means Clusters with k = {k_range[i]}')
         i += 1
 plt.show()
 
@@ -111,6 +112,7 @@ plt.show()
 fig = plt.figure()
 plt.bar(range(5, 11), kmean_results['cluster_sse'])
 plt.xticks(range(5, 11))
+plt.title('K-Means Cluster SSE for varying k')
 plt.xlabel('k')
 plt.ylabel('Intra cluster error SSE')
 plt.show()
