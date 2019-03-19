@@ -5,13 +5,15 @@ import seaborn as sns
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 
-# drop unnecessary column
+# drop doppelte index spalte
 dc_properties = pd.read_csv('data/dc_properties.csv').iloc[:, 1:]
 
-# apply correct preprocessing for numeric / categorical cols
 
-# apply PCA dimension reduction
-
-# cluster and plot the data
+# Preprocessing
 
 
+# Durchführen der PCA auf den numerischen Features
+
+# Plotten der PCA feature importance
+
+# Weiterverarbeiten, Clustering mit PCA Representation

@@ -120,7 +120,7 @@ plt.clf()
 
 # Plot
 
-dbscan = DBSCAN(eps=1)
+dbscan = DBSCAN(eps=0.5)
 dbscan_results = {'k': k_range,
                   'cluster_assignment': dbscan.fit_predict(X=wb_data_scaled)}
 
@@ -129,6 +129,7 @@ plot_cluster_results(df=wb_data_nomiss, x='population', y='fertility_rate',
                      cluster_vector=dbscan_results['cluster_assignment'], ax=ax,
                      plot_centroids=False)
 plt.show()
+
 
 fix, ax = plt.subplots(nrows=1, ncols=1)
 determine_eps_range(scaled_data=wb_data_scaled, k=4, ax=ax)
